@@ -115,7 +115,8 @@ public class Client
         Console.WriteLine("Playing next song");
     }
 
-    public void SetNextShuffle()
+    
+    public void SetShuffle()
     {
         if (Shuffle == true)
         {
