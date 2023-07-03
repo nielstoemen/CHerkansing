@@ -10,7 +10,7 @@ public class Playlist
 {
     string Owner { get; set; }
 
-    public Playlist(Person person, string owner) 
+    public Playlist( string owner) 
     {
         Owner = owner;
     }
