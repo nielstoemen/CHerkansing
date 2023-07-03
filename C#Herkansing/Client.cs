@@ -146,9 +146,12 @@ public class Client
 
     }
 
-    public void ShowPlaylist()
+    public void ShowPlaylist(List <Playlist> playlists)
     {
-
+        foreach (Playlist playlist in playlists)
+        {
+            Console.WriteLine($"playlist {playlist.ToString()}");
+        }
     }
 
     public void SelectPlaylist()
