@@ -19,10 +19,11 @@ public class Client
     List <Album> AllAlbums { get; set; } = new List<Album>();
     List <song> AllSongs { get; set; } = new List<song>();
     List <Person> AllUsers { get; set; } = new List<Person>();
-    List <Playlist> AllPlaylists { get; set; }  
+    List <Playlist> AllPlaylists { get; set; }
 
-
+    Playlist testplaylist = new("testname");
     
+
     //voids----------------------
 
     public Client (List<Person> persons, List <Album> albums, List <song> songs)
@@ -100,7 +101,7 @@ public class Client
 
     public void Play()
     {
-        Console.WriteLine("Playing song");
+        
     }
 
     public void Pause()
@@ -143,10 +144,9 @@ public class Client
 
     //playlist commands---------------
      
-    public void CreatePlaylist()
+    public void CreatePlaylist(string index)
     {
-        string input = Console.ReadLine();
-        Playlist newplaylist = new Playlist(input);
+        Playlist newplaylist = new Playlist(index);
     }
 
     public void ShowPlaylist(List <Playlist> playlists)
@@ -169,17 +169,20 @@ public class Client
         
     }
 
-    public void AddToPlaylist()
+    public void AddToPlaylist(int index)
     {
-
+        
     }
 
     public void ShowSongInPlaylist()
     {
-
+        //foreach (song songetje in AllSongs)
+        //{
+        //    Console.WriteLine(songetje.ToString());
+        //}
     }
 
-    public void RemoveFromPlaylist()
+    public void RemoveFromPlaylist(int index)
     {
 
     }
@@ -199,12 +202,12 @@ public class Client
 
     }
 
-    public void AddFriend()
+    public void AddFriend(int index)
     {
 
     }
 
-    public void RemoveFriend()
+    public void RemoveFriend(int index)
     {
 
     }

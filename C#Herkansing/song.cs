@@ -26,6 +26,26 @@ public class song
         return base.ToString();
     }
 
+    public void Play()
+    {
+        Console.WriteLine("number is being played");
+    }
+
+    public void Pause()
+    {
+        Console.WriteLine("number has been paused");
+    }
+
+    public void Stop()
+    {
+        Console.WriteLine("number has been stopped");
+    }
+
+    public void Next()
+    {
+        Console.WriteLine("next number is being played");
+    }
+
 
 
 }
