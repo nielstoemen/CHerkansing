@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -18,6 +19,7 @@ public class Client
     List <Album> AllAlbums { get; set; } = new List<Album>();
     List <song> AllSongs { get; set; } = new List<song>();
     List <Person> AllUsers { get; set; } = new List<Person>();
+    List <Playlist> AllPlaylists { get; set; }  
 
 
     
@@ -140,10 +142,11 @@ public class Client
     }
 
     //playlist commands---------------
-
+     
     public void CreatePlaylist()
     {
-
+        string input = Console.ReadLine();
+        Playlist newplaylist = new Playlist(input);
     }
 
     public void ShowPlaylist(List <Playlist> playlists)
@@ -154,14 +157,16 @@ public class Client
         }
     }
 
-    public void SelectPlaylist()
+    public void SelectPlaylist(int index)
     {
-
+        var firstint = AllPlaylists.ElementAt(index);
+        Console.WriteLine(firstint.ToString());
     }
 
-    public void RemovePlaylist()
+    public void RemovePlaylist(int index)
     {
-
+        AllPlaylists.RemoveAt(index);
+        
     }
 
     public void AddToPlaylist()
@@ -183,7 +188,10 @@ public class Client
 
     public void ShowFriends()
     {
-
+        foreach (Person person in AllUsers)
+        {
+            Console.WriteLine(person.ToString);
+        }
     }
 
     public void SelectFriend()
